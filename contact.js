@@ -5,7 +5,7 @@ function sendContact(team) {
   const email = document.querySelector("input[placeholder='Your email']").value;
   const message = document.querySelector("textarea").value;
 
-  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+  emailjs.send("service_l2a7iil", "template_pe74yla", {
     from_name: name,
     from_email: email,
     message: message,
