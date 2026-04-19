@@ -1,4 +1,4 @@
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("yNbmZ_-99rpJS1Gim");
 
 function sendContact(team) {
   const name = document.querySelector("input[placeholder='Your name']").value;
