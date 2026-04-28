@@ -21,9 +21,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--paper);
@@ -32,7 +30,6 @@
       cursor: none;
     }
 
-    /* Custom cursor */
     .cursor {
       position: fixed;
       width: 12px; height: 12px;
@@ -54,7 +51,6 @@
       opacity: 0.5;
     }
 
-    /* ─── NAV ─── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -63,7 +59,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.25rem 3rem;
-      mix-blend-mode: normal;
     }
     nav::before {
       content: '';
@@ -86,13 +81,12 @@
       gap: 0.6rem;
     }
     .nav-logo span.kanji {
-      display: inline-block;
+      display: inline-flex;
       width: 36px; height: 36px;
       background: var(--red);
       color: white;
       font-size: 1rem;
       border-radius: 4px;
-      display: flex;
       align-items: center;
       justify-content: center;
     }
@@ -122,7 +116,6 @@
     }
     .nav-cta:hover { background: var(--red-light) !important; }
 
-    /* ─── HERO ─── */
     #hero {
       min-height: 100vh;
       display: grid;
@@ -154,8 +147,7 @@
     .hero-eyebrow::before {
       content: '';
       display: block;
-      width: 32px;
-      height: 1px;
+      width: 32px; height: 1px;
       background: var(--red);
     }
     .hero-title {
@@ -165,10 +157,7 @@
       color: var(--ink);
       margin-bottom: 2rem;
     }
-    .hero-title .line {
-      display: block;
-      overflow: hidden;
-    }
+    .hero-title .line { display: block; overflow: hidden; }
     .hero-title .line span {
       display: block;
       opacity: 0;
@@ -224,8 +213,7 @@
       transition: border-color 0.2s, color 0.2s;
       display: inline-block;
     }
-    .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
-
+    .btn-ghost:hover { border-color: var(--ink); }
     .hero-stats {
       display: flex;
       gap: 2.5rem;
@@ -235,7 +223,6 @@
       opacity: 0;
       animation: fadeUp 0.8s 1.3s forwards;
     }
-    .stat-item { }
     .stat-num {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2.2rem;
@@ -249,11 +236,7 @@
       color: var(--muted);
       margin-top: 0.15rem;
     }
-
-    .hero-right {
-      position: relative;
-      overflow: hidden;
-    }
+    .hero-right { position: relative; overflow: hidden; }
     .hero-right::after {
       content: '';
       position: absolute;
@@ -262,8 +245,7 @@
       z-index: 1;
     }
     .hero-bg-img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       filter: grayscale(20%) contrast(1.05);
       transform: scale(1.05);
@@ -271,8 +253,7 @@
     }
     .hero-kanji-overlay {
       position: absolute;
-      right: 2rem;
-      bottom: 3rem;
+      right: 2rem; bottom: 3rem;
       z-index: 2;
       font-family: 'Noto Serif JP', serif;
       font-size: 10rem;
@@ -284,7 +265,6 @@
       animation: fadeIn 2s 1s forwards;
       opacity: 0;
     }
-    /* Floating sakura petals */
     .petal {
       position: fixed;
       width: 8px; height: 8px;
@@ -296,7 +276,6 @@
       animation: fall linear infinite;
     }
 
-    /* ─── MARQUEE ─── */
     .marquee-strip {
       background: var(--red);
       color: white;
@@ -315,12 +294,8 @@
       padding: 0 2rem;
       opacity: 0.9;
     }
-    .marquee-dot {
-      color: rgba(255,255,255,0.4);
-      padding: 0 0.5rem;
-    }
+    .marquee-dot { color: rgba(255,255,255,0.4); padding: 0 0.5rem; }
 
-    /* ─── SECTION COMMON ─── */
     section { padding: 7rem 5rem; }
     .section-label {
       font-size: 0.72rem;
@@ -333,23 +308,15 @@
       align-items: center;
       gap: 0.75rem;
     }
-    .section-label::before {
-      content: '';
-      width: 24px; height: 1px;
-      background: var(--red);
-    }
+    .section-label::before { content: ''; width: 24px; height: 1px; background: var(--red); }
     .section-title {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(3rem, 5vw, 5rem);
       line-height: 0.95;
       color: var(--ink);
     }
-    .section-title em {
-      color: var(--red);
-      font-style: italic;
-    }
+    .section-title em { color: var(--red); font-style: italic; }
 
-    /* ─── ABOUT ─── */
     #about {
       background: var(--ink);
       color: var(--white);
@@ -369,12 +336,7 @@
       margin-top: 1.5rem;
     }
     .about-body p + p { margin-top: 1rem; }
-    .about-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 2rem;
-    }
+    .about-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
     .tag {
       border: 1px solid rgba(247,244,240,0.2);
       padding: 0.4rem 1rem;
@@ -385,9 +347,7 @@
       transition: border-color 0.2s, color 0.2s;
     }
     .tag:hover { border-color: var(--sakura); color: var(--sakura); }
-    .about-right {
-      position: relative;
-    }
+    .about-right { position: relative; }
     .about-card-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -401,19 +361,9 @@
     }
     .about-card:hover { background: rgba(200,16,46,0.08); }
     .about-card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-    .about-card h4 {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--white);
-      margin-bottom: 0.4rem;
-    }
-    .about-card p {
-      font-size: 0.8rem;
-      color: rgba(247,244,240,0.5);
-      line-height: 1.5;
-    }
+    .about-card h4 { font-weight: 600; font-size: 0.9rem; color: var(--white); margin-bottom: 0.4rem; }
+    .about-card p { font-size: 0.8rem; color: rgba(247,244,240,0.5); line-height: 1.5; }
 
-    /* ─── HIGHLIGHTS ─── */
     #highlights { background: var(--paper); }
     .highlights-grid {
       margin-top: 3rem;
@@ -459,16 +409,8 @@
       line-height: 1.1;
       margin-bottom: 0.5rem;
     }
-    .highlight-desc {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.5;
-    }
-    .highlight-side {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
+    .highlight-desc { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .highlight-side { display: flex; flex-direction: column; gap: 2px; }
     .highlight-mini {
       flex: 1;
       position: relative;
@@ -478,11 +420,8 @@
       align-items: flex-end;
       padding: 1.5rem;
       min-height: 235px;
-      cursor: default;
     }
-    .highlight-mini:first-child {
-      background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
-    }
+    .highlight-mini:first-child { background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%); }
     .highlight-mini-kanji {
       position: absolute;
       top: 1rem; right: 1rem;
@@ -498,17 +437,9 @@
       color: white;
       letter-spacing: 0.05em;
     }
-    .highlight-mini-content p {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.5);
-      margin-top: 0.3rem;
-    }
+    .highlight-mini-content p { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 0.3rem; }
 
-    /* ─── SOCIAL CONNECT ─── */
-    #connect {
-      background: var(--paper);
-      padding: 6rem 5rem;
-    }
+    #connect { background: var(--paper); padding: 6rem 5rem; }
     .social-header {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -516,11 +447,7 @@
       margin-bottom: 3rem;
       gap: 2rem;
     }
-    .social-cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
+    .social-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
     .social-card {
       padding: 2rem;
       background: white;
@@ -560,26 +487,9 @@
     .social-icon.discord { background: #5865F2; }
     .social-icon.facebook { background: #1877F2; }
     .social-icon.rubric { background: var(--red); }
-    .social-platform {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.3rem;
-    }
-    .social-handle {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 0.03em;
-      line-height: 1;
-      margin-bottom: 0.6rem;
-    }
-    .social-desc {
-      font-size: 0.8rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
+    .social-platform { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .social-handle { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.03em; line-height: 1; margin-bottom: 0.6rem; }
+    .social-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
     .social-arrow {
       position: absolute;
       top: 1.5rem; right: 1.5rem;
@@ -589,11 +499,8 @@
     }
     .social-card:hover .social-arrow { opacity: 1; transform: translate(3px, -3px); }
 
-    /* ─── INSTAGRAM FEED ─── */
-    #gallery {
-      background: var(--ink);
-      padding: 6rem 5rem;
-    }
+    /* ─── GALLERY ─── */
+    #gallery { background: var(--ink); padding: 6rem 5rem; }
     #gallery .section-label { color: var(--sakura); }
     #gallery .section-label::before { background: var(--sakura); }
     #gallery .section-title { color: white; }
@@ -609,28 +516,20 @@
       overflow: hidden;
       position: relative;
       background: rgba(255,255,255,0.04);
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
-    .insta-tile-inner {
+    /* Real photo tiles */
+    .insta-tile img {
       width: 100%; height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Noto Serif JP', serif;
-      font-size: 3rem;
-      font-weight: 200;
-      color: rgba(255,255,255,0.08);
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.4s;
+      object-fit: cover;
+      filter: grayscale(10%);
+      transition: transform 0.4s, filter 0.3s;
+      display: block;
     }
-    .insta-tile:hover .insta-tile-inner { transform: scale(1.05); }
+    .insta-tile:hover img { transform: scale(1.05); filter: grayscale(0%); }
     .insta-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(200,16,46,0.75);
+      background: rgba(200,16,46,0.65);
       opacity: 0;
       display: flex;
       align-items: center;
@@ -639,19 +538,7 @@
       font-size: 1.5rem;
     }
     .insta-tile:hover .insta-overlay { opacity: 1; }
-    /* Colourful tiles using CSS gradients to mimic photo content */
-    .t1 { background: linear-gradient(135deg, #f8e5d5 0%, #e8b4a0 50%, #c87060 100%); }
-    .t2 { background: linear-gradient(135deg, #d4e8f0 0%, #8bbdd4 50%, #4a8aaa 100%); }
-    .t3 { background: linear-gradient(135deg, #fdf0e0 0%, #f5c87a 50%, #e8962a 100%); }
-    .t4 { background: linear-gradient(135deg, #e8f0e4 0%, #98c494 50%, #4a9a54 100%); }
-    .t5 { background: linear-gradient(135deg, #f0e4f4 0%, #c498d4 50%, #8850a8 100%); }
-    .t6 { background: linear-gradient(135deg, #fde8ea 0%, #f4a0b0 50%, #c84060 100%); }
-    .t7 { background: linear-gradient(135deg, #e4eef4 0%, #8ab4d4 50%, #2050a0 100%); }
-    .t8 { background: linear-gradient(135deg, #f4f0e4 0%, #d4c090 50%, #a08050 100%); }
-    .insta-cta {
-      margin-top: 2rem;
-      text-align: center;
-    }
+    .insta-cta { margin-top: 2rem; text-align: center; }
     .insta-follow-btn {
       display: inline-flex;
       align-items: center;
@@ -668,10 +555,7 @@
       text-decoration: none;
       transition: border-color 0.2s, background 0.2s;
     }
-    .insta-follow-btn:hover {
-      border-color: white;
-      background: rgba(255,255,255,0.05);
-    }
+    .insta-follow-btn:hover { border-color: white; background: rgba(255,255,255,0.05); }
     .insta-follow-btn .ig-icon {
       width: 20px; height: 20px;
       background: linear-gradient(135deg, #f09433, #dc2743, #bc1888);
@@ -682,7 +566,7 @@
       font-size: 0.8rem;
     }
 
-    /* ─── TRAVEL GUIDE ─── */
+    /* ─── GUIDE ─── */
     #guide {
       background: var(--paper);
       display: grid;
@@ -704,8 +588,7 @@
     .guide-left::before {
       content: '日本';
       position: absolute;
-      right: -1rem;
-      bottom: 2rem;
+      right: -1rem; bottom: 2rem;
       font-family: 'Noto Serif JP', serif;
       font-size: 12rem;
       font-weight: 700;
@@ -717,7 +600,24 @@
     .guide-left .section-label::before { background: rgba(255,255,255,0.4); }
     .guide-left .section-title { color: white; }
     .guide-left .section-title em { color: rgba(255,255,255,0.7); font-style: italic; }
-    .guide-subtitle { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin: 1.5rem 0 2.5rem; max-width: 360px; }
+    .guide-subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin: 1.5rem 0 1rem;
+      max-width: 360px;
+    }
+    .guide-highlight-note {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.12);
+      border-left: 3px solid rgba(255,255,255,0.45);
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      max-width: 360px;
+    }
+    .guide-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
     .btn-white {
       display: inline-block;
       background: white;
@@ -729,10 +629,24 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       text-decoration: none;
-      width: fit-content;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    .btn-white-ghost {
+      display: inline-block;
+      background: transparent;
+      color: white;
+      padding: 0.85rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: border-color 0.2s;
+    }
+    .btn-white-ghost:hover { border-color: white; }
     .guide-right {
       padding: 7rem 4rem;
       display: flex;
@@ -749,20 +663,12 @@
       transition: border-color 0.2s, background 0.2s;
     }
     .guide-feature:hover { border-color: rgba(200,16,46,0.2); background: rgba(200,16,46,0.02); }
-    .guide-feature-icon {
-      font-size: 1.8rem;
-      flex-shrink: 0;
-      width: 48px;
-      text-align: center;
-    }
+    .guide-feature-icon { font-size: 1.8rem; flex-shrink: 0; width: 48px; text-align: center; }
     .guide-feature h4 { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.3rem; }
     .guide-feature p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
 
     /* ─── CONTACT ─── */
-    #contact {
-      background: var(--ink);
-      padding: 7rem 5rem;
-    }
+    #contact { background: var(--ink); padding: 7rem 5rem; }
     #contact .section-label { color: var(--sakura); }
     #contact .section-label::before { background: var(--sakura); }
     #contact .section-title { color: white; }
@@ -781,14 +687,7 @@
     }
     .contact-card:hover { background: rgba(247,244,240,0.07); border-color: rgba(200,16,46,0.3); }
     .contact-icon { font-size: 2rem; margin-bottom: 1.2rem; }
-    .contact-team {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--sakura);
-      margin-bottom: 0.5rem;
-    }
+    .contact-team { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sakura); margin-bottom: 0.5rem; }
     .contact-card h3 { font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 0.7rem; }
     .contact-card p { font-size: 0.82rem; color: rgba(247,244,240,0.5); line-height: 1.55; margin-bottom: 1.5rem; }
     .contact-link {
@@ -805,7 +704,118 @@
     }
     .contact-link:hover { gap: 0.7rem; }
 
-    /* ─── FOOTER ─── */
+    /* ─── CONTACT FORM ─── */
+    .contact-form-wrap {
+      margin-top: 3rem;
+      border: 1px solid rgba(247,244,240,0.08);
+      padding: 3rem;
+      background: rgba(247,244,240,0.02);
+    }
+    .contact-form-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.03em;
+    }
+    .contact-form-sub {
+      font-size: 0.85rem;
+      color: rgba(247,244,240,0.4);
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(247,244,240,0.35);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(247,244,240,0.05);
+      border: 1px solid rgba(247,244,240,0.1);
+      color: var(--white);
+      padding: 0.75rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      border-radius: 0;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(247,244,240,0.2); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(200,16,46,0.6);
+      background: rgba(200,16,46,0.04);
+    }
+    .form-group select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(247,244,240,0.35)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-color: rgba(247,244,240,0.05);
+      padding-right: 2.5rem;
+    }
+    .form-group select option { background: #1a1a1a; color: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-full { grid-column: 1 / -1; }
+    .form-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .btn-submit {
+      background: var(--red);
+      color: white;
+      border: none;
+      padding: 0.85rem 2.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-submit:hover { background: var(--red-light); transform: translateY(-2px); }
+    .btn-submit:disabled { background: rgba(247,244,240,0.15); cursor: not-allowed; transform: none; }
+    .form-note { font-size: 0.75rem; color: rgba(247,244,240,0.25); line-height: 1.4; }
+    .form-success-msg {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .form-success-msg .success-kanji {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 4rem;
+      font-weight: 200;
+      color: var(--sakura);
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .form-success-msg h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: white;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .form-success-msg p { font-size: 0.85rem; color: rgba(247,244,240,0.45); line-height: 1.6; }
+
     footer {
       background: #080808;
       padding: 3rem 5rem;
@@ -814,17 +824,9 @@
       align-items: center;
       border-top: 1px solid rgba(247,244,240,0.05);
     }
-    .footer-logo {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 1rem;
-      color: rgba(247,244,240,0.4);
-    }
+    .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 1rem; color: rgba(247,244,240,0.4); }
     .footer-logo strong { color: white; }
-    .footer-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
     .footer-links a {
       font-size: 0.75rem;
       letter-spacing: 0.08em;
@@ -834,12 +836,8 @@
       transition: color 0.2s;
     }
     .footer-links a:hover { color: white; }
-    .footer-copy {
-      font-size: 0.75rem;
-      color: rgba(247,244,240,0.25);
-    }
+    .footer-copy { font-size: 0.75rem; color: rgba(247,244,240,0.25); }
 
-    /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -848,9 +846,7 @@
       from { opacity: 0; transform: translateY(110%); }
       to { opacity: 1; transform: translateY(0); }
     }
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
+    @keyframes fadeIn { to { opacity: 1; } }
     @keyframes subtleZoom {
       from { transform: scale(1.05); }
       to { transform: scale(1.12); }
@@ -866,21 +862,16 @@
       100% { opacity: 0; transform: translateY(100vh) rotate(360deg); }
     }
 
-    /* Scroll reveal */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
 
-    /* ─── MOBILE ─── */
     @media (max-width: 900px) {
       body { cursor: auto; }
       .cursor, .cursor-trail { display: none; }
@@ -896,24 +887,23 @@
       #guide { grid-template-columns: 1fr; }
       .guide-left, .guide-right { padding: 4rem 1.5rem; }
       .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2rem 1.5rem; }
       .highlights-grid { grid-template-columns: 1fr; }
       #connect { padding: 4rem 1.5rem; }
       #gallery { padding: 4rem 1.5rem; }
       #contact { padding: 4rem 1.5rem; }
+      .contact-form-wrap { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Custom Cursor -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-trail" id="cursorTrail"></div>
-
-  <!-- Falling Petals -->
   <div id="petals"></div>
 
-  <!-- ─── NAV ─── -->
+  <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">
       <span class="kanji">日</span>
@@ -929,7 +919,7 @@
     </ul>
   </nav>
 
-  <!-- ─── HERO ─── -->
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
       <p class="hero-eyebrow">UNSW's Japanese Culture Society · Est. Arc Club</p>
@@ -938,9 +928,7 @@
         <span class="line"><span>Celebrate.</span></span>
         <span class="line"><span>Nihon.</span></span>
       </h1>
-      <p class="hero-subtitle">
-        Your home for Japanese language, culture, and community at UNSW — from anime screenings to matsuri festivals and everything in between.
-      </p>
+      <p class="hero-subtitle">Your home for Japanese language, culture, and community at UNSW — from anime screenings to matsuri festivals and everything in between.</p>
       <div class="hero-actions">
         <a href="https://campus.hellorubric.com/?s=2089" class="btn-primary" target="_blank">Become a Member</a>
         <a href="#about" class="btn-ghost">Discover NSA →</a>
@@ -961,16 +949,12 @@
       </div>
     </div>
     <div class="hero-right">
-      <img
-        class="hero-bg-img"
-        src="https://unswnsa.github.io/NipponStudentAssociation/catman.jpg"
-        alt="NSA UNSW Community"
-      />
+      <img class="hero-bg-img" src="img1.jpg" alt="NSA UNSW Community" />
       <div class="hero-kanji-overlay">祭文化楽</div>
     </div>
   </section>
 
-  <!-- ─── MARQUEE ─── -->
+  <!-- MARQUEE -->
   <div class="marquee-strip">
     <div class="marquee-inner" aria-hidden="true">
       <span class="marquee-item">Japanese Culture</span><span class="marquee-dot">✦</span>
@@ -982,7 +966,6 @@
       <span class="marquee-item">Networking</span><span class="marquee-dot">✦</span>
       <span class="marquee-item">Japan Travel</span><span class="marquee-dot">✦</span>
       <span class="marquee-item">Cultural Festivals</span><span class="marquee-dot">✦</span>
-      <!-- Duplicate for seamless loop -->
       <span class="marquee-item">Japanese Culture</span><span class="marquee-dot">✦</span>
       <span class="marquee-item">Anime Screenings</span><span class="marquee-dot">✦</span>
       <span class="marquee-item">Matsuri Nights</span><span class="marquee-dot">✦</span>
@@ -995,15 +978,15 @@
     </div>
   </div>
 
-  <!-- ─── ABOUT ─── -->
+  <!-- ABOUT -->
   <section id="about">
     <div class="reveal">
       <div class="section-label">Who We Are</div>
       <h2 class="section-title">More than<br/>a club — a <em>community</em></h2>
-      <p class="about-body">
+      <div class="about-body">
         <p>The Nippon Students Association (NSA) at UNSW is a student-run society dedicated to celebrating Japanese culture, language, and the connections that bring people together. Whether you're a complete beginner or a seasoned Japan enthusiast — you belong here.</p>
         <p>We run events year-round, from intimate language exchanges to large-scale matsuri festivals, always with the same mission: to build a welcoming space for everyone passionate about Japan.</p>
-      </p>
+      </div>
       <div class="about-tags">
         <span class="tag">🎌 Cultural Festivals</span>
         <span class="tag">🎎 Japanese Language</span>
@@ -1041,7 +1024,7 @@
     </div>
   </section>
 
-  <!-- ─── HIGHLIGHTS ─── -->
+  <!-- HIGHLIGHTS -->
   <section id="highlights">
     <div class="reveal">
       <div class="section-label">Highlights</div>
@@ -1049,7 +1032,7 @@
     </div>
     <div class="highlights-grid reveal reveal-delay-1">
       <div class="highlight-card">
-        <img src="https://unswnsa.github.io/NipponStudentAssociation/catman.jpg" alt="Catman at NSA UNSW" />
+        <img src="img2.jpg" alt="NSA UNSW event" />
         <div class="highlight-content">
           <span class="highlight-badge">⭐ Featured · March 2026</span>
           <div class="highlight-title">We Met Catman — Japan's Walking Superhero</div>
@@ -1078,7 +1061,7 @@
     </div>
   </section>
 
-  <!-- ─── CONNECT / SOCIAL ─── -->
+  <!-- CONNECT -->
   <section id="connect">
     <div class="social-header reveal">
       <div>
@@ -1119,7 +1102,7 @@
     </div>
   </section>
 
-  <!-- ─── GALLERY / INSTAGRAM FEED ─── -->
+  <!-- GALLERY -->
   <section id="gallery">
     <div class="reveal">
       <div class="section-label">Gallery</div>
@@ -1127,52 +1110,20 @@
     </div>
     <div class="insta-grid reveal reveal-delay-1">
       <div class="insta-tile">
-        <div class="insta-tile-inner t1" title="Summer BBQ">
-          <span>夏</span>
-          <div class="insta-overlay">📸</div>
-        </div>
+        <img src="img1.jpg" alt="NSA UNSW event" />
+        <div class="insta-overlay">📸</div>
       </div>
       <div class="insta-tile">
-        <div class="insta-tile-inner t2" title="Matsuri Festival">
-          <span>祭</span>
-          <div class="insta-overlay">📸</div>
-        </div>
+        <img src="img2.jpg" alt="NSA UNSW event" />
+        <div class="insta-overlay">📸</div>
       </div>
       <div class="insta-tile">
-        <div class="insta-tile-inner t3" title="Food Events">
-          <span>食</span>
-          <div class="insta-overlay">📸</div>
-        </div>
+        <img src="img3.jpg" alt="NSA UNSW event" />
+        <div class="insta-overlay">📸</div>
       </div>
       <div class="insta-tile">
-        <div class="insta-tile-inner t4" title="Language Exchange">
-          <span>語</span>
-          <div class="insta-overlay">📸</div>
-        </div>
-      </div>
-      <div class="insta-tile">
-        <div class="insta-tile-inner t5" title="Japan Travel">
-          <span>旅</span>
-          <div class="insta-overlay">📸</div>
-        </div>
-      </div>
-      <div class="insta-tile">
-        <div class="insta-tile-inner t6" title="Cultural Events">
-          <span>文</span>
-          <div class="insta-overlay">📸</div>
-        </div>
-      </div>
-      <div class="insta-tile">
-        <div class="insta-tile-inner t7" title="Anime Screenings">
-          <span>映</span>
-          <div class="insta-overlay">📸</div>
-        </div>
-      </div>
-      <div class="insta-tile">
-        <div class="insta-tile-inner t8" title="J-Music">
-          <span>楽</span>
-          <div class="insta-overlay">📸</div>
-        </div>
+        <img src="img4.jpg" alt="NSA UNSW event" />
+        <div class="insta-overlay">📸</div>
       </div>
     </div>
     <div class="insta-cta reveal">
@@ -1183,15 +1134,17 @@
     </div>
   </section>
 
-  <!-- ─── JAPAN GUIDE ─── -->
+  <!-- JAPAN GUIDE -->
   <section id="guide" style="padding:0;">
     <div class="guide-left reveal">
-      <div class="section-label">Free Resource</div>
+      <div class="section-label">Community Resource</div>
       <h2 class="section-title">Japan<br/><em>Travel Guide</em></h2>
-      <p class="guide-subtitle">
-        Planning your first (or fifth) trip to Japan? Our complete student travel guide covers everything — from IC cards to hidden ramen spots.
-      </p>
-      <a href="#contact" class="btn-white">Get the Free Guide →</a>
+      <p class="guide-subtitle">Our guide is still being built — and you can help shape it. NSA members who've been to Japan share their real finds from hidden ramen spots to shrines nobody else visits.</p>
+      <p class="guide-highlight-note">⭐ Submit a tip now — the best recommendations get a special feature when the full guide launches.</p>
+      <div class="guide-ctas">
+        <a href="https://unswnsa.github.io/NSAtravelguide/" target="_blank" class="btn-white">Browse the Community Guide →</a>
+        <a href="https://unswnsa.github.io/NSAtravelguide/" target="_blank" class="btn-white-ghost">Submit a Tip</a>
+      </div>
     </div>
     <div class="guide-right">
       <div class="guide-feature reveal">
@@ -1225,9 +1178,9 @@
     </div>
   </section>
 
-  <!-- ─── CONTACT ─── -->
+  <!-- CONTACT -->
   <section id="contact">
-    <div class="reveal" style="margin-bottom:0;">
+    <div class="reveal">
       <div class="section-label">Get In Touch</div>
       <h2 class="section-title">We'd love to<br/><em>hear from you</em></h2>
     </div>
@@ -1254,13 +1207,69 @@
         <a href="mailto:cultural@nsaunsw.com" class="contact-link">Contact CE & IL →</a>
       </div>
     </div>
+
+    <!--
+      CONTACT FORM — TO ACTIVATE EMAIL SENDING:
+      1. Sign up free at formspree.io
+      2. Create a new form → copy your Form ID (looks like: xpwzabcd)
+      3. Replace YOUR_FORM_ID below with your actual ID
+      Works on GitHub Pages with no server needed.
+    -->
+    <div class="contact-form-wrap reveal">
+      <div id="form-inner">
+        <div class="contact-form-title">Send us a message</div>
+        <div class="contact-form-sub">Fill in the form below or reach us directly via the team emails above.</div>
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Your name</label>
+              <input type="text" id="f-name" name="name" placeholder="e.g. Yuki Tanaka" required />
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email address</label>
+              <input type="email" id="f-email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="f-team">Send to</label>
+              <select id="f-team" name="team" required>
+                <option value="" disabled selected>Select a team</option>
+                <option value="Events">🎌 Events & Activities</option>
+                <option value="Sponsorship">🤝 Partnerships & Sponsors</option>
+                <option value="Cultural">🌸 Cultural Support & IL</option>
+                <option value="General">💬 General Enquiry</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group form-full">
+              <label for="f-subject">Subject</label>
+              <input type="text" id="f-subject" name="subject" placeholder="What's this about?" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group form-full">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message" placeholder="Tell us more…" required></textarea>
+            </div>
+          </div>
+          <input type="text" name="_gotcha" style="display:none" />
+          <div class="form-actions">
+            <button type="submit" class="btn-submit" id="submit-btn">Send Message →</button>
+            <span class="form-note">We typically reply within 2 business days.</span>
+          </div>
+        </form>
+      </div>
+      <div class="form-success-msg" id="form-success">
+        <span class="success-kanji">ありがとう</span>
+        <h4>Message Sent!</h4>
+        <p>Thanks for reaching out — we'll be in touch soon.<br/>Follow us on Instagram for the latest updates.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- ─── FOOTER ─── -->
+  <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">
-      <strong>NSA UNSW</strong> — Nippon Students Association
-    </div>
+    <div class="footer-logo"><strong>NSA UNSW</strong> — Nippon Students Association</div>
     <ul class="footer-links">
       <li><a href="https://www.instagram.com/nsaunsw/" target="_blank">Instagram</a></li>
       <li><a href="https://discord.gg/unswnsa" target="_blank">Discord</a></li>
@@ -1271,7 +1280,7 @@
   </footer>
 
   <script>
-    // ─── Custom Cursor ───
+    // Custom Cursor
     const cursor = document.getElementById('cursor');
     const trail = document.getElementById('cursorTrail');
     let mx = 0, my = 0, tx = 0, ty = 0;
@@ -1282,7 +1291,7 @@
     });
     setInterval(() => {
       tx += (mx - tx) * 0.12;
-      ty += (my - ty) *.12;
+      ty += (my - ty) * 0.12;
       trail.style.left = tx - 20 + 'px';
       trail.style.top = ty - 20 + 'px';
     }, 16);
@@ -1291,7 +1300,7 @@
       el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
     });
 
-    // ─── Sakura Petals ───
+    // Sakura Petals
     const petalContainer = document.getElementById('petals');
     function spawnPetal() {
       const p = document.createElement('div');
@@ -1306,25 +1315,23 @@
     }
     setInterval(spawnPetal, 800);
 
-    // ─── Scroll Reveal ───
+    // Scroll Reveal
     const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
       });
     }, { threshold: 0.12 });
     reveals.forEach(r => observer.observe(r));
 
-    // ─── Nav scroll style ───
+    // Nav shrink on scroll
     window.addEventListener('scroll', () => {
-      document.querySelector('nav').style.paddingTop = window.scrollY > 50 ? '0.8rem' : '1.25rem';
-      document.querySelector('nav').style.paddingBottom = window.scrollY > 50 ? '0.8rem' : '1.25rem';
+      const n = document.querySelector('nav');
+      n.style.paddingTop = window.scrollY > 50 ? '0.8rem' : '1.25rem';
+      n.style.paddingBottom = window.scrollY > 50 ? '0.8rem' : '1.25rem';
     });
 
-    // ─── Counter animation ───
+    // Counter animation
     function animateCount(el, target, suffix = '') {
       let start = 0;
       const step = target / 60;
@@ -1346,6 +1353,48 @@
       });
     }, { threshold: 0.5 });
     if (counters.length) cObserver.observe(counters[0]);
+
+    // Contact Form
+    const form = document.getElementById('contact-form');
+    const formInner = document.getElementById('form-inner');
+    const formSuccess = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          formInner.style.display = 'none';
+          formSuccess.style.display = 'block';
+        } else {
+          throw new Error('not ok');
+        }
+      } catch {
+        // Fallback: open mailto prefilled
+        const name    = document.getElementById('f-name').value;
+        const team    = document.getElementById('f-team').value;
+        const subject = document.getElementById('f-subject').value;
+        const message = document.getElementById('f-message').value;
+        const emailMap = {
+          Events: 'events@nsaunsw.com',
+          Sponsorship: 'sponsors@nsaunsw.com',
+          Cultural: 'cultural@nsaunsw.com',
+          General: 'events@nsaunsw.com'
+        };
+        const to = emailMap[team] || 'events@nsaunsw.com';
+        window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + name + '\n\n' + message)}`;
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message →';
+      }
+    });
   </script>
 </body>
 </html>
